@@ -1,3 +1,8 @@
+import java.awt.*;
+import java.util.*;
+import java.util.List;
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -11,9 +16,9 @@ public class Main {
 
         System.out.println("Выводим информацию о челевеке: ");
 
-        PensionFund First = new PensionFund("State Pension Fund", true, "01.05.1963", 190000);
-        PensionFund Second = new PensionFund("Star", false, "25.12.2002", 2300);
-        PensionFund Third = new PensionFund("Guarantee", false, "12.10.2020", 1358);
+        PensionFund First = new PensionFund("State Pension Fund", true, "01.05.1963");
+        PensionFund Second = new PensionFund("Star", false, "25.12.2002");
+        PensionFund Third = new PensionFund("Guarantee", false, "12.10.2020");
 
         First.setName("State Pension Fund");
         Second.setName("Star");
@@ -26,10 +31,6 @@ public class Main {
         First.getCreationData();
         Second.getCreationData();
         Third.getCreationData();
-
-        First.setNumberOfPeople(190000);
-        Second.setNumberOfPeople(2300);
-        Third.setNumberOfPeople(1358);
 
         First.getInfo();
         Second.getInfo();
@@ -70,6 +71,25 @@ public class Main {
         GenderType MaxType = Max.getType();
         GenderType KarlType = Karl.getType();
         GenderType PetraType = Petra.getType();
+
+        List<Pensioner> pensionerList = new ArrayList<>();
+
+        pensionerList.add(Michal);
+        pensionerList.add(Mira);
+        pensionerList.add(Sonia);
+
+        First.setPensionerList(pensionerList);
+
+
+
+
+
+
+
+
+
+
+
 
 
 

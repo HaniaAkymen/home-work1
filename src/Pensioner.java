@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Pensioner extends Person {
+public class Pensioner extends Person implements AbleToCalculatePension {
 
     private double pension;
 
@@ -33,7 +33,9 @@ public class Pensioner extends Person {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
+
         Pensioner pensioner = (Pensioner) o;
+
         return Double.compare(pensioner.pension, pension) == 0;
     }
 

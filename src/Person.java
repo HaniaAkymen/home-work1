@@ -10,12 +10,14 @@ public abstract class Person {
     private double money;
     private GenderType type;
 
-    public Person(String name, int age, int height, int weight, double money) {
+
+    public Person(String name, int age, int height, int weight, double money, GenderType type) {
         this.name = name;
         this.age = age;
         this.height = height;
         this.weight = weight;
         this.money = money;
+        this.type = type;
     }
 
     public String getName() {
