@@ -22,7 +22,6 @@ public abstract class Person {
     public Person(){
 
     }
-
     public void getInfo() {
         System.out.println("Имя человека: " + name + ", " + "возраст: " + age + ", " + "рост: " + height + ", " + "вес: " + weight);
     }
