@@ -4,17 +4,10 @@ public class Pensioner extends Person implements AbleToCalculatePension {
 
     private double pension;
 
-    public Pensioner(String name, int age, int height, int weight, double money, double pension) {
-        super(name, age, height, weight, money);
-        this.pension = pension;
-    }
-    public double getPension() {
-        return pension;
-    }
+    public Pensioner(String name, int age, int height, int weight) {
+        super(name, age, height, weight);
 
-    public void setPension(double pension) {
-        this.pension = pension;
-    }
+   }
 
     @Override
     public void die() {
@@ -49,5 +42,10 @@ public class Pensioner extends Person implements AbleToCalculatePension {
         return "Pensioner{" +
                 "pension=" + pension +
                 '}';
+    }
+
+    @Override
+    public double calculatePension() {
+        return 0;
     }
 }

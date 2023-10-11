@@ -6,13 +6,13 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        Pensioner Michal = new Pensioner("Michal",76,168,73,400.80,70.95);
-        Pensioner Mira = new Pensioner("Mira",82,160,68,600.50,65.98);
-        Pensioner Sonia = new Pensioner("Sonia",79,159,59,700.35,65.97);
+        Pensioner Michal = new Pensioner("Michal",76,168,73);
+        Pensioner Mira = new Pensioner("Mira",82,160,68);
+        Pensioner Sonia = new Pensioner("Sonia",79,159,59);
 
-        Worker Max = new Worker("Max",45, 192, 97,3900);
-        Worker Karl = new Worker("Karl",48, 182, 90, 1700);
-        Worker Petra = new Worker("Petr",36, 167, 62,2900);
+        Worker Max = new Worker("Max", 45, 192, 97);
+        Worker Karl = new Worker("Karl",48, 182, 90);
+        Worker Petra = new Worker("Petr", 36, 167, 62);
 
         System.out.println("Выводим информацию о челевеке: ");
 
@@ -78,21 +78,13 @@ public class Main {
         pensionerList.add(Mira);
         pensionerList.add(Sonia);
 
-        First.setPensionerList(pensionerList);
+        double FirstPensionFundAvaragePension = First.calculateMedianPension();
+        double SecondPensionFundAvaragePension = Second.calculateMedianPension();
+        double ThirdPensionFundAvaragePension = Third.calculateMedianPension();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        System.out.println(FirstPensionFundAvaragePension);
+        System.out.println(SecondPensionFundAvaragePension);
+        System.out.println(ThirdPensionFundAvaragePension);
 
     }
 }

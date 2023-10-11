@@ -11,13 +11,38 @@ public abstract class Person {
     private GenderType type;
 
 
-    public Person(String name, int age, int height, int weight, double money, GenderType type) {
+    public Person(String name, int age, int height, int weight) {
         this.name = name;
         this.age = age;
         this.height = height;
         this.weight = weight;
-        this.money = money;
-        this.type = type;
+
+    }
+
+    public Person(){
+
+    }
+
+    public void getInfo() {
+        System.out.println("Имя человека: " + name + ", " + "возраст: " + age + ", " + "рост: " + height + ", " + "вес: " + weight);
+    }
+
+    public void goToWork() {
+        if (age < 18 || age > 70) {
+            System.out.println(name + " отдыхает дома");
+        } else {
+            System.out.println(name + " рaботает");
+        }
+    }
+    public void die(){
+        System.out.println("Человек погиб");
+    };
+
+    public abstract void die(int years);
+
+    public double getMoney() {
+        System.out.println("Количество денег " + money + " евро" + " у " + name);
+        return money;
     }
 
     public String getName() {
@@ -56,11 +81,6 @@ public abstract class Person {
         this.money = money;
     }
 
-
-    public void getInfo() {
-        System.out.println("Имя человека: " + name + ", " + "возраст: " + age + ", " + "рост: " + height + ", " + "вес: " + weight);
-    }
-
     public GenderType getType() {
         return type;
     }
@@ -69,24 +89,6 @@ public abstract class Person {
         this.type = type;
     }
 
-    public void goToWork() {
-        if (age < 18 || age > 70) {
-            System.out.println(name + " отдыхает дома");
-        } else {
-            System.out.println(name + " рaботает");
-        }
-    }
-
-    public double getMoney() {
-        System.out.println("Количество денег " + money + " евро" + " у " + name);
-        return money;
-    }
-
-    public void die(){
-        System.out.println("Человек погиб");
-    };
-
-    public abstract void die(int years);
 
 
     @Override

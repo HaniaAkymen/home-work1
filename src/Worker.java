@@ -7,16 +7,27 @@ public class Worker extends Person implements AbleToCalculatePension {
     private double miniSalary;
     private double maxSalary;
 
-    public Worker(String name, int age, int height, int weight, double money) {
-        super(name, age, height, weight, money);
+    public Worker(String name, int age, int height, int weight) {
+        super(name, age, height, weight);
+
     }
 
-    public Worker (String name, int age, int height, double money){
-        super(name, age, height,0,0);
+    public Worker (String name, int age, int height){
+        super(name, age, height,0);
     }
 
     public Worker(){
-        super(null,0,0,0,0);
+        super(null,0,0,0);
+    }
+
+    @Override
+    public void die() {
+        System.out.println("Этот человек не дожил до пенсии");
+    }
+
+    @Override
+    public void die(int years){
+        System.out.println(getName() + " - этот человек не доживет до пенсии и умрет через " + years + " лет");
     }
 
     public double getMiniSalary() {
@@ -35,20 +46,6 @@ public class Worker extends Person implements AbleToCalculatePension {
         this.maxSalary = maxSalary;
     }
 
-    @Override
-    public double getMoney() {
-        return super.getMoney();
-    }
-
-    @Override
-    public void die() {
-        System.out.println("Этот человек не дожил до пенсии");
-    }
-
-    @Override
-    public void die(int years){
-      System.out.println(getName() + " - этот человек не доживет до пенсии и умрет через " + years + " лет");
-    }
 
     public double calculatePension(){
         double averageSalary = calculateAverage((int) miniSalary, (int) maxSalary);
