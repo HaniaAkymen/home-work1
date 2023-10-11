@@ -72,11 +72,24 @@ public class Main {
         GenderType KarlType = Karl.getType();
         GenderType PetraType = Petra.getType();
 
-        List<Pensioner> pensionerList = new ArrayList<>();
+        List<Pensioner> firstPensionerList = new ArrayList<>();
 
-        pensionerList.add(Michal);
-        pensionerList.add(Mira);
-        pensionerList.add(Sonia);
+        firstPensionerList.add(Michal);
+        firstPensionerList.add(Mira);
+        firstPensionerList.add(Sonia);
+
+        List<Pensioner> secondPensionerList = new ArrayList<>();
+
+        secondPensionerList.add(Michal);
+        secondPensionerList.add(Mira);
+        secondPensionerList.add(Sonia);
+
+        List<Pensioner> thirdPensionerList = new ArrayList<>();
+
+        thirdPensionerList.add(Michal);
+        thirdPensionerList.add(Mira);
+        thirdPensionerList.add(Sonia);
+
 
         double FirstPensionFundAvaragePension = First.calculateMedianPension();
         double SecondPensionFundAvaragePension = Second.calculateMedianPension();
